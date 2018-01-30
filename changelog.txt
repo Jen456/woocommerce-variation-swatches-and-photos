@@ -1,4 +1,10 @@
 *** WooCommerce Variation Swatches and Photos ***
+2017.11.28 - version 3.0.5
+    * Update:  Plugin Header Updates
+    * Update:  Tested to WC 3.2.5
+    * Update:  Check for valid attachment image before attempting to load.  Fixes a warning in very rare situations.
+    * New:  Added term description to the WC_Swatch_Term for customizers to use. 
+
 2017.08.18 - version 3.0.4
     * Fix:  Fix compatibility issue in AJAX handler where variation_id was being referenced incorrectly.
 
@@ -229,7 +235,7 @@
 	* Update: Default image size 32px if size is empty. 
 
 2013.06.11 - version 1.2.8
- * Swatches and quick view compatibily
+ * Swatches and quick view compatibility
 
 2013.05.20 - version 1.2.7
   * Fixes
