@@ -1,37 +1,36 @@
-module.exports = function (grunt) {
-	'use strict';
+/*global module:false*/
+module.exports = function ( grunt ) {
+    'use strict';
 
-	grunt.initConfig({
-		
-		makepot: {
-			options: {
-				type: 'wp-plugin',
-				domainPath: 'i18n/languages',
-				potHeaders: {
-					'report-msgid-bugs-to': '',
-					'language-team': 'LANGUAGE <EMAIL@ADDRESS>'
-				}
-			},
-			dist: {
-				options: {
-					potFilename: 'wc_swatches_and_photos.pot',
-					exclude: [
-						'apigen/.*',
-						'tests/.*',
-						'tmp/.*'
-					]
-				}
-			}
-		},
-	});
+    /**
+     * load-grunt-config
+     *
+     * Grunt plugin that lets you break up your Gruntfile config by task
+     *
+     * @link https://www.npmjs.com/package/load-grunt-config
+     */
+    grunt.configs = require( 'load-grunt-config' )( grunt );
 
-	// Load NPM tasks to be used here
-	grunt.loadNpmTasks('grunt-wp-i18n');
+    /**
+     * load-grunt-tasks
+     *
+     * Load multiple grunt tasks using globbing patterns
+     *
+     * This module will read the dependencies/devDependencies/peerDependencies
+     * in your package.json and load grunt tasks that match the provided patterns.
+     *
+     * @link https://www.npmjs.com/package/load-grunt-tasks
+     */
+    require( 'load-grunt-tasks' )( grunt );
 
-	// Register tasks
-	grunt.registerTask('default', [
-		'makepot'
-	]);	
-
+    /**
+     * time-grunt
+     *
+     * Display the elapsed execution time of grunt tasks
+     *
+     * @link https://www.npmjs.com/package/time-grunt
+     */
+    require( 'time-grunt' )( grunt );
 };
+
 
