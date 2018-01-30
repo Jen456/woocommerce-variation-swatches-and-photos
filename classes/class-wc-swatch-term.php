@@ -17,6 +17,7 @@ class WC_Swatch_Term {
 	public $size;
 	public $width = 32;
 	public $height = 32;
+	public $description;
 
 	public function __construct( $attribute_configuration, $term_id, $taxonomy, $selected = false, $size = 'swatches_image_size' ) {
 
@@ -39,6 +40,7 @@ class WC_Swatch_Term {
 		$type = get_woocommerce_term_meta( $this->term_id, $this->meta_key() . '_type', true );
 		$color = get_woocommerce_term_meta( $this->term_id, $this->meta_key() . '_color', true );
 		$this->thumbnail_id = get_woocommerce_term_meta( $this->term_id, $this->meta_key() . '_photo', true );
+		$this->description = term_description($this->term_id, $this->taxonomy_slug);
 
 		$this->type = $type;
 		$this->thumbnail_src = apply_filters( 'woocommerce_placeholder_img_src', WC()->plugin_url() . '/assets/images/placeholder.png' );

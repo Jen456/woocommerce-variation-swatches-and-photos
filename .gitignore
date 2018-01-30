@@ -8,4 +8,5 @@ Thumbs.db
 .project
 .settings*
 /deploy/
-
+/grunt/
+/dist/
