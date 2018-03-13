@@ -155,6 +155,7 @@
         var $use_ajax = false;
         var $swatches_xhr = null;
 
+        var checked = false;
 
         $form.on('bind_calculator', function () {
 
@@ -240,7 +241,42 @@
                 $form.find('.select-option').removeClass('selected');
                 $form.find('.radio-option').prop('checked', false);
                 return false;
-            })
+            }).on('reset_data', function (e) {
+
+            var current_options = calculator.get_current();
+
+            if (!checked) {
+
+                //Grey out or show valid options.
+                $form.find('div.select').each(function (index, element) {
+                    var $wc_select_box = $(element).find('select').first();
+
+                    var attribute_name = $wc_select_box.data('attribute_name') || $wc_select_box.attr('name');
+                    var avaiable_options = current_options[attribute_name];
+
+                    $(element).find('div.select-option').each(function (index, option) {
+                        if (!avaiable_options[$(option).data('value')]) {
+                            $(option).removeClass('selected');
+                            $(option).addClass('disabled', 'disabled');
+                        } else {
+                            $(option).removeClass('disabled');
+                        }
+                    });
+
+                    $(element).find('input.radio-option').each(function (index, option) {
+                        if (!avaiable_options[$(option).val()]) {
+                            $(option).attr('disabled', 'disabled');
+                            $(option).parent().addClass('disabled', 'disabled');
+                        } else {
+                            $(option).removeAttr('disabled');
+                            $(option).parent().removeClass('disabled');
+                        }
+                    });
+                });
+
+                checked = true;
+            }
+        })
             .on('click', '.select-option', function (e) {
                 e.preventDefault();
 
@@ -368,7 +404,8 @@
 
                     });
                 }
-            });
+            })
+
     };
 
     var forms = [];
@@ -377,7 +414,7 @@
         var $form = $(e.target);
         forms.push($form);
 
-        if ( !$form.data('has_swatches_form') || $form.hasClass('summary_content') ) {
+        if (!$form.data('has_swatches_form') || $form.hasClass('summary_content')) {
             if ($form.find('.swatch-control').length) {
                 $form.data('has_swatches_form', true);
 
@@ -388,13 +425,15 @@
                     for (var i = 0; i < forms.length; i++) {
 
 
-                            forms[i].trigger('woocommerce_variation_has_changed');
-                            forms[i].trigger('bind_calculator');
-                            forms[i].trigger('woocommerce_variation_has_changed');
+                        forms[i].trigger('woocommerce_variation_has_changed');
+                        forms[i].trigger('bind_calculator');
+                        forms[i].trigger('woocommerce_variation_has_changed');
 
 
                     }
-                })
+                });
+
+                $form.trigger('check_variations');
             }
         }
     });
