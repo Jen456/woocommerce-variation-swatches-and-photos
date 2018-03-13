@@ -5,7 +5,7 @@ class WC_SwatchesPlugin {
 
 	public function __construct() {
 
-		define( 'WC_SWATCHES_VERSION', '3.0.0' );
+		define( 'WC_SWATCHES_VERSION', '3.0.6' );
 
 		require 'woocommerce-swatches-template-functions.php';
 
