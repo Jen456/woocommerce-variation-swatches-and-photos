@@ -1,9 +1,15 @@
 *** WooCommerce Variation Swatches and Photos ***
+2018.01.09 - version 3.0.6
+    * Update:  Additional tweak for the check variations trigger to allow users to select an in stock item properly the first time.
+    * Update:  Correct handling of out of stock items that are selected as defaults.
+    * Update:  Version updates.   Tested WC 3.3.0
+
 2017.11.28 - version 3.0.5
     * Update:  Plugin Header Updates
     * Update:  Tested to WC 3.2.5
     * Update:  Check for valid attachment image before attempting to load.  Fixes a warning in very rare situations.
-    * New:  Added term description to the WC_Swatch_Term for customizers to use. 
+    * New:  Added term description to the WC_Swatch_Term for customizers to use.
+    * Update:  Trigger check variations so out of stock items which are the defaults are deselected properly.
 
 2017.08.18 - version 3.0.4
     * Fix:  Fix compatibility issue in AJAX handler where variation_id was being referenced incorrectly.
