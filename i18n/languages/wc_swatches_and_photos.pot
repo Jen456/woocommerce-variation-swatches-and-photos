@@ -1,19 +1,25 @@
-# Copyright (C) 2018 Lucas Stark
+# Copyright (C) 2017 Lucas Stark
 # This file is distributed under the GNU General Public License v3.0.
 msgid ""
 msgstr ""
-"Project-Id-Version: WooCommerce Variation Swatches and Photos 3.0.8\n"
+"Project-Id-Version: WooCommerce Variation Swatches and Photos 3.0.5\n"
 "Report-Msgid-Bugs-To: "
 "https://wordpress.org/support/plugin/woocommerce-swatches\n"
-"POT-Creation-Date: 2018-06-01 13:24:54+00:00\n"
+"POT-Creation-Date: 2017-11-08 14:17:06+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "X-Generator: grunt-wp-i18n1.0.0\n"
 
+#: back_compat_less_24/classes/class-wc-swatches-product-attribute-images.php:132
+#: back_compat_less_24/classes/class-wc-swatches-product-attribute-images.php:228
+#: back_compat_less_24/classes/class-wc-swatches-product-data-tab.php:333
+#: back_compat_less_27/classes/class-wc-swatches-product-attribute-images.php:136
+#: back_compat_less_27/classes/class-wc-swatches-product-attribute-images.php:198
+#: back_compat_less_27/classes/class-wc-swatches-product-data-tab.php:337
 #: classes/class-wc-swatches-product-attribute-images.php:134
 #: classes/class-wc-swatches-product-attribute-images.php:193
 #: classes/class-wc-swatches-product-data-tab.php:323
@@ -31,6 +37,10 @@ msgstr ""
 msgid "Color"
 msgstr ""
 
+#: back_compat_less_24/classes/class-wc-swatches-product-attribute-images.php:144
+#: back_compat_less_24/classes/class-wc-swatches-product-attribute-images.php:320
+#: back_compat_less_27/classes/class-wc-swatches-product-attribute-images.php:148
+#: back_compat_less_27/classes/class-wc-swatches-product-attribute-images.php:256
 #: classes/class-wc-swatches-product-attribute-images.php:146
 #: classes/class-wc-swatches-product-attribute-images.php:251
 #: dist/woocommerce-variation-swatches-and-photos/back_compat_less_24/classes/class-wc-swatches-product-attribute-images.php:144
@@ -42,6 +52,12 @@ msgstr ""
 msgid "Thumbnail"
 msgstr ""
 
+#: back_compat_less_24/classes/class-wc-swatches-product-attribute-images.php:150
+#: back_compat_less_24/classes/class-wc-swatches-product-attribute-images.php:252
+#: back_compat_less_24/classes/class-wc-swatches-product-data-tab.php:352
+#: back_compat_less_27/classes/class-wc-swatches-product-attribute-images.php:154
+#: back_compat_less_27/classes/class-wc-swatches-product-attribute-images.php:222
+#: back_compat_less_27/classes/class-wc-swatches-product-data-tab.php:356
 #: classes/class-wc-swatches-product-attribute-images.php:152
 #: classes/class-wc-swatches-product-attribute-images.php:217
 #: classes/class-wc-swatches-product-data-tab.php:350
@@ -57,6 +73,12 @@ msgstr ""
 msgid "Upload/Add image"
 msgstr ""
 
+#: back_compat_less_24/classes/class-wc-swatches-product-attribute-images.php:151
+#: back_compat_less_24/classes/class-wc-swatches-product-attribute-images.php:253
+#: back_compat_less_24/classes/class-wc-swatches-product-data-tab.php:353
+#: back_compat_less_27/classes/class-wc-swatches-product-attribute-images.php:155
+#: back_compat_less_27/classes/class-wc-swatches-product-attribute-images.php:223
+#: back_compat_less_27/classes/class-wc-swatches-product-data-tab.php:357
 #: classes/class-wc-swatches-product-attribute-images.php:153
 #: classes/class-wc-swatches-product-attribute-images.php:218
 #: classes/class-wc-swatches-product-data-tab.php:351
@@ -72,6 +94,10 @@ msgstr ""
 msgid "Remove image"
 msgstr ""
 
+#: back_compat_less_24/classes/class-wc-swatches-product-attribute-images.php:203
+#: back_compat_less_24/classes/class-wc-swatches-product-data-tab.php:246
+#: back_compat_less_27/classes/class-wc-swatches-product-attribute-images.php:173
+#: back_compat_less_27/classes/class-wc-swatches-product-data-tab.php:250
 #: classes/class-wc-swatches-product-attribute-images.php:168
 #: classes/class-wc-swatches-product-data-tab.php:161
 #: classes/class-wc-swatches-product-data-tab.php:244
@@ -85,6 +111,8 @@ msgstr ""
 msgid "Type"
 msgstr ""
 
+#: back_compat_less_24/classes/class-wc-swatches-product-attribute-images.php:207
+#: back_compat_less_27/classes/class-wc-swatches-product-attribute-images.php:177
 #: classes/class-wc-swatches-product-attribute-images.php:172
 #: dist/woocommerce-variation-swatches-and-photos/back_compat_less_24/classes/class-wc-swatches-product-attribute-images.php:207
 #: dist/woocommerce-variation-swatches-and-photos/back_compat_less_27/classes/class-wc-swatches-product-attribute-images.php:177
@@ -92,6 +120,10 @@ msgstr ""
 msgid "None"
 msgstr ""
 
+#: back_compat_less_24/classes/class-wc-swatches-product-attribute-images.php:208
+#: back_compat_less_24/classes/class-wc-swatches-product-data-tab.php:305
+#: back_compat_less_27/classes/class-wc-swatches-product-attribute-images.php:178
+#: back_compat_less_27/classes/class-wc-swatches-product-data-tab.php:309
 #: classes/class-wc-swatches-product-attribute-images.php:173
 #: classes/class-wc-swatches-product-data-tab.php:303
 #: dist/woocommerce-variation-swatches-and-photos/back_compat_less_24/classes/class-wc-swatches-product-attribute-images.php:208
@@ -103,6 +135,10 @@ msgstr ""
 msgid "Color Swatch"
 msgstr ""
 
+#: back_compat_less_24/classes/class-wc-swatches-product-attribute-images.php:209
+#: back_compat_less_24/classes/class-wc-swatches-product-attribute-images.php:245
+#: back_compat_less_27/classes/class-wc-swatches-product-attribute-images.php:179
+#: back_compat_less_27/classes/class-wc-swatches-product-attribute-images.php:215
 #: classes/class-wc-swatches-product-attribute-images.php:174
 #: classes/class-wc-swatches-product-attribute-images.php:210
 #: dist/woocommerce-variation-swatches-and-photos/back_compat_less_24/classes/class-wc-swatches-product-attribute-images.php:209
@@ -114,6 +150,8 @@ msgstr ""
 msgid "Photo"
 msgstr ""
 
+#: back_compat_less_24/classes/class-wc-swatches-product-data-tab.php:58
+#: back_compat_less_27/classes/class-wc-swatches-product-data-tab.php:58
 #: classes/class-wc-swatches-product-data-tab.php:52
 #: dist/woocommerce-variation-swatches-and-photos/back_compat_less_24/classes/class-wc-swatches-product-data-tab.php:58
 #: dist/woocommerce-variation-swatches-and-photos/back_compat_less_27/classes/class-wc-swatches-product-data-tab.php:58
@@ -121,6 +159,8 @@ msgstr ""
 msgid "Product Attribute Name"
 msgstr ""
 
+#: back_compat_less_24/classes/class-wc-swatches-product-data-tab.php:61
+#: back_compat_less_27/classes/class-wc-swatches-product-data-tab.php:61
 #: classes/class-wc-swatches-product-data-tab.php:55
 #: dist/woocommerce-variation-swatches-and-photos/back_compat_less_24/classes/class-wc-swatches-product-data-tab.php:61
 #: dist/woocommerce-variation-swatches-and-photos/back_compat_less_27/classes/class-wc-swatches-product-data-tab.php:61
@@ -128,6 +168,10 @@ msgstr ""
 msgid "Attribute Control Type"
 msgstr ""
 
+#: back_compat_less_24/classes/class-wc-swatches-product-data-tab.php:111
+#: back_compat_less_24/classes/class-wc-swatches-product-data-tab.php:171
+#: back_compat_less_27/classes/class-wc-swatches-product-data-tab.php:111
+#: back_compat_less_27/classes/class-wc-swatches-product-data-tab.php:173
 #: classes/class-wc-swatches-product-data-tab.php:105
 #: classes/class-wc-swatches-product-data-tab.php:167
 #: dist/woocommerce-variation-swatches-and-photos/back_compat_less_24/classes/class-wc-swatches-product-data-tab.php:111
@@ -139,6 +183,8 @@ msgstr ""
 msgid "Taxonomy Colors and Images"
 msgstr ""
 
+#: back_compat_less_24/classes/class-wc-swatches-product-data-tab.php:111
+#: back_compat_less_27/classes/class-wc-swatches-product-data-tab.php:111
 #: classes/class-wc-swatches-product-data-tab.php:105
 #: dist/woocommerce-variation-swatches-and-photos/back_compat_less_24/classes/class-wc-swatches-product-data-tab.php:111
 #: dist/woocommerce-variation-swatches-and-photos/back_compat_less_27/classes/class-wc-swatches-product-data-tab.php:111
@@ -146,15 +192,8 @@ msgstr ""
 msgid "Custom Product Colors and Images"
 msgstr ""
 
-#: classes/class-wc-swatches-product-data-tab.php:107
-#: classes/class-wc-swatches-product-data-tab.php:170
-#: dist/woocommerce-variation-swatches-and-photos/back_compat_less_27/classes/class-wc-swatches-product-data-tab.php:113
-#: dist/woocommerce-variation-swatches-and-photos/back_compat_less_27/classes/class-wc-swatches-product-data-tab.php:176
-#: dist/woocommerce-variation-swatches-and-photos/classes/class-wc-swatches-product-data-tab.php:107
-#: dist/woocommerce-variation-swatches-and-photos/classes/class-wc-swatches-product-data-tab.php:170
-msgid "Radio Buttons"
-msgstr ""
-
+#: back_compat_less_24/classes/class-wc-swatches-product-data-tab.php:173
+#: back_compat_less_27/classes/class-wc-swatches-product-data-tab.php:175
 #: classes/class-wc-swatches-product-data-tab.php:169
 #: dist/woocommerce-variation-swatches-and-photos/back_compat_less_24/classes/class-wc-swatches-product-data-tab.php:173
 #: dist/woocommerce-variation-swatches-and-photos/back_compat_less_27/classes/class-wc-swatches-product-data-tab.php:175
@@ -162,11 +201,8 @@ msgstr ""
 msgid "Custom Colors and Images"
 msgstr ""
 
-#: classes/class-wc-swatches-product-data-tab.php:178
-#: dist/woocommerce-variation-swatches-and-photos/classes/class-wc-swatches-product-data-tab.php:178
-msgid "Layout"
-msgstr ""
-
+#: back_compat_less_24/classes/class-wc-swatches-product-data-tab.php:183
+#: back_compat_less_27/classes/class-wc-swatches-product-data-tab.php:187
 #: classes/class-wc-swatches-product-data-tab.php:181
 #: dist/woocommerce-variation-swatches-and-photos/back_compat_less_24/classes/class-wc-swatches-product-data-tab.php:183
 #: dist/woocommerce-variation-swatches-and-photos/back_compat_less_27/classes/class-wc-swatches-product-data-tab.php:187
@@ -174,6 +210,8 @@ msgstr ""
 msgid "No Label"
 msgstr ""
 
+#: back_compat_less_24/classes/class-wc-swatches-product-data-tab.php:183
+#: back_compat_less_27/classes/class-wc-swatches-product-data-tab.php:187
 #: classes/class-wc-swatches-product-data-tab.php:181
 #: dist/woocommerce-variation-swatches-and-photos/back_compat_less_24/classes/class-wc-swatches-product-data-tab.php:183
 #: dist/woocommerce-variation-swatches-and-photos/back_compat_less_27/classes/class-wc-swatches-product-data-tab.php:187
@@ -181,17 +219,8 @@ msgstr ""
 msgid "Show label above"
 msgstr ""
 
-#: classes/class-wc-swatches-product-data-tab.php:181
-#: dist/woocommerce-variation-swatches-and-photos/back_compat_less_27/classes/class-wc-swatches-product-data-tab.php:187
-#: dist/woocommerce-variation-swatches-and-photos/classes/class-wc-swatches-product-data-tab.php:181
-msgid "Show label below"
-msgstr ""
-
-#: classes/class-wc-swatches-product-data-tab.php:192
-#: dist/woocommerce-variation-swatches-and-photos/classes/class-wc-swatches-product-data-tab.php:192
-msgid "Size"
-msgstr ""
-
+#: back_compat_less_24/classes/class-wc-swatches-product-data-tab.php:212
+#: back_compat_less_27/classes/class-wc-swatches-product-data-tab.php:216
 #: classes/class-wc-swatches-product-data-tab.php:210
 #: dist/woocommerce-variation-swatches-and-photos/back_compat_less_24/classes/class-wc-swatches-product-data-tab.php:212
 #: dist/woocommerce-variation-swatches-and-photos/back_compat_less_27/classes/class-wc-swatches-product-data-tab.php:216
@@ -199,6 +228,8 @@ msgstr ""
 msgid "WooCommerce default select boxes will be used for this product attribute"
 msgstr ""
 
+#: back_compat_less_24/classes/class-wc-swatches-product-data-tab.php:223
+#: back_compat_less_27/classes/class-wc-swatches-product-data-tab.php:227
 #: classes/class-wc-swatches-product-data-tab.php:221
 #: dist/woocommerce-variation-swatches-and-photos/back_compat_less_24/classes/class-wc-swatches-product-data-tab.php:223
 #: dist/woocommerce-variation-swatches-and-photos/back_compat_less_27/classes/class-wc-swatches-product-data-tab.php:227
@@ -209,11 +240,8 @@ msgid ""
 "for this product attribute."
 msgstr ""
 
-#: classes/class-wc-swatches-product-data-tab.php:229
-#: dist/woocommerce-variation-swatches-and-photos/classes/class-wc-swatches-product-data-tab.php:229
-msgid "Attribute Configuration"
-msgstr ""
-
+#: back_compat_less_24/classes/class-wc-swatches-product-data-tab.php:240
+#: back_compat_less_27/classes/class-wc-swatches-product-data-tab.php:244
 #: classes/class-wc-swatches-product-data-tab.php:238
 #: dist/woocommerce-variation-swatches-and-photos/back_compat_less_24/classes/class-wc-swatches-product-data-tab.php:240
 #: dist/woocommerce-variation-swatches-and-photos/back_compat_less_27/classes/class-wc-swatches-product-data-tab.php:244
@@ -221,6 +249,8 @@ msgstr ""
 msgid "Preview"
 msgstr ""
 
+#: back_compat_less_24/classes/class-wc-swatches-product-data-tab.php:243
+#: back_compat_less_27/classes/class-wc-swatches-product-data-tab.php:247
 #: classes/class-wc-swatches-product-data-tab.php:241
 #: dist/woocommerce-variation-swatches-and-photos/back_compat_less_24/classes/class-wc-swatches-product-data-tab.php:243
 #: dist/woocommerce-variation-swatches-and-photos/back_compat_less_27/classes/class-wc-swatches-product-data-tab.php:247
@@ -228,6 +258,18 @@ msgstr ""
 msgid "Attribute"
 msgstr ""
 
+#: back_compat_less_24/classes/class-wc-swatches-product-data-tab.php:320
+#: back_compat_less_27/classes/class-wc-swatches-product-data-tab.php:324
+#: classes/class-wc-swatches-product-data-tab.php:318
+#: dist/woocommerce-variation-swatches-and-photos/back_compat_less_24/classes/class-wc-swatches-product-data-tab.php:320
+#: dist/woocommerce-variation-swatches-and-photos/back_compat_less_27/classes/class-wc-swatches-product-data-tab.php:324
+#: dist/woocommerce-variation-swatches-and-photos/classes/class-wc-swatches-product-data-tab.php:318
+msgid "Attribute Color or Image"
+msgstr ""
+
+#: back_compat_less_24/classes/class-wc-swatches-product-data-tab.php:343
+#: back_compat_less_27/classes/class-wc-swatches-product-data-tab.php:309
+#: back_compat_less_27/classes/class-wc-swatches-product-data-tab.php:347
 #: classes/class-wc-swatches-product-data-tab.php:303
 #: classes/class-wc-swatches-product-data-tab.php:324
 #: classes/class-wc-swatches-product-data-tab.php:341
@@ -240,13 +282,8 @@ msgstr ""
 msgid "Image"
 msgstr ""
 
-#: classes/class-wc-swatches-product-data-tab.php:318
-#: dist/woocommerce-variation-swatches-and-photos/back_compat_less_24/classes/class-wc-swatches-product-data-tab.php:320
-#: dist/woocommerce-variation-swatches-and-photos/back_compat_less_27/classes/class-wc-swatches-product-data-tab.php:324
-#: dist/woocommerce-variation-swatches-and-photos/classes/class-wc-swatches-product-data-tab.php:318
-msgid "Attribute Color or Image"
-msgstr ""
-
+#: back_compat_less_24/classes/class-wc-swatches-product-data-tab.php:349
+#: back_compat_less_27/classes/class-wc-swatches-product-data-tab.php:353
 #: classes/class-wc-swatches-product-data-tab.php:347
 #: dist/woocommerce-variation-swatches-and-photos/back_compat_less_24/classes/class-wc-swatches-product-data-tab.php:349
 #: dist/woocommerce-variation-swatches-and-photos/back_compat_less_27/classes/class-wc-swatches-product-data-tab.php:353
@@ -254,6 +291,8 @@ msgstr ""
 msgid "Thumbnail Preview"
 msgstr ""
 
+#: back_compat_less_24/classes/class-wc-swatches-product-data-tab.php:378
+#: back_compat_less_27/classes/class-wc-swatches-product-data-tab.php:382
 #: classes/class-wc-swatches-product-data-tab.php:376
 #: dist/woocommerce-variation-swatches-and-photos/back_compat_less_24/classes/class-wc-swatches-product-data-tab.php:378
 #: dist/woocommerce-variation-swatches-and-photos/back_compat_less_27/classes/class-wc-swatches-product-data-tab.php:382
@@ -266,28 +305,31 @@ msgid ""
 "here."
 msgstr ""
 
+#: back_compat_less_24/templates/single-product/input-select.php:4
+#: back_compat_less_27/woocommerce-swatches-template-functions.php:18
+#: back_compat_less_27/woocommerce-swatches-template-functions.php:103
 #: dist/woocommerce-variation-swatches-and-photos/back_compat_less_24/templates/single-product/input-select.php:4
 #: dist/woocommerce-variation-swatches-and-photos/back_compat_less_27/woocommerce-swatches-template-functions.php:18
 #: dist/woocommerce-variation-swatches-and-photos/back_compat_less_27/woocommerce-swatches-template-functions.php:103
 #: dist/woocommerce-variation-swatches-and-photos/woocommerce-swatches-template-functions.php:18
-#: dist/woocommerce-variation-swatches-and-photos/woocommerce-swatches-template-functions.php:34
-#: dist/woocommerce-variation-swatches-and-photos/woocommerce-swatches-template-functions.php:112
-#: dist/woocommerce-variation-swatches-and-photos/woocommerce-swatches-template-functions.php:128
+#: dist/woocommerce-variation-swatches-and-photos/woocommerce-swatches-template-functions.php:103
 #: woocommerce-swatches-template-functions.php:18
-#: woocommerce-swatches-template-functions.php:34
-#: woocommerce-swatches-template-functions.php:112
-#: woocommerce-swatches-template-functions.php:128
+#: woocommerce-swatches-template-functions.php:103
 msgid "Choose an option"
 msgstr ""
 
+#: back_compat_less_24/templates/single-product/variable.php:30
 #: dist/woocommerce-variation-swatches-and-photos/back_compat_less_24/templates/single-product/variable.php:30
 msgid "Reset selection"
 msgstr ""
 
+#: back_compat_less_24/templates/single-product/variable.php:64
 #: dist/woocommerce-variation-swatches-and-photos/back_compat_less_24/templates/single-product/variable.php:64
 msgid "This product is currently out of stock and unavailable."
 msgstr ""
 
+#: back_compat_less_24/woocommerce-swatches.php:104
+#: back_compat_less_27/woocommerce-swatches.php:103
 #: dist/woocommerce-variation-swatches-and-photos/back_compat_less_24/woocommerce-swatches.php:104
 #: dist/woocommerce-variation-swatches-and-photos/back_compat_less_27/woocommerce-swatches.php:103
 #: dist/woocommerce-variation-swatches-and-photos/woocommerce-swatches-main.php:99
@@ -295,11 +337,46 @@ msgstr ""
 msgid "Swatches and Photos"
 msgstr ""
 
+#: back_compat_less_24/woocommerce-swatches.php:105
+#: back_compat_less_27/woocommerce-swatches.php:104
 #: dist/woocommerce-variation-swatches-and-photos/back_compat_less_24/woocommerce-swatches.php:105
 #: dist/woocommerce-variation-swatches-and-photos/back_compat_less_27/woocommerce-swatches.php:104
 #: dist/woocommerce-variation-swatches-and-photos/woocommerce-swatches-main.php:100
 #: woocommerce-swatches-main.php:100
 msgid "The default size for color swatches and photos."
+msgstr ""
+
+#: back_compat_less_27/classes/class-wc-swatches-product-data-tab.php:113
+#: back_compat_less_27/classes/class-wc-swatches-product-data-tab.php:176
+#: classes/class-wc-swatches-product-data-tab.php:107
+#: classes/class-wc-swatches-product-data-tab.php:170
+#: dist/woocommerce-variation-swatches-and-photos/back_compat_less_27/classes/class-wc-swatches-product-data-tab.php:113
+#: dist/woocommerce-variation-swatches-and-photos/back_compat_less_27/classes/class-wc-swatches-product-data-tab.php:176
+#: dist/woocommerce-variation-swatches-and-photos/classes/class-wc-swatches-product-data-tab.php:107
+#: dist/woocommerce-variation-swatches-and-photos/classes/class-wc-swatches-product-data-tab.php:170
+msgid "Radio Buttons"
+msgstr ""
+
+#: back_compat_less_27/classes/class-wc-swatches-product-data-tab.php:187
+#: classes/class-wc-swatches-product-data-tab.php:181
+#: dist/woocommerce-variation-swatches-and-photos/back_compat_less_27/classes/class-wc-swatches-product-data-tab.php:187
+#: dist/woocommerce-variation-swatches-and-photos/classes/class-wc-swatches-product-data-tab.php:181
+msgid "Show label below"
+msgstr ""
+
+#: classes/class-wc-swatches-product-data-tab.php:178
+#: dist/woocommerce-variation-swatches-and-photos/classes/class-wc-swatches-product-data-tab.php:178
+msgid "Layout"
+msgstr ""
+
+#: classes/class-wc-swatches-product-data-tab.php:192
+#: dist/woocommerce-variation-swatches-and-photos/classes/class-wc-swatches-product-data-tab.php:192
+msgid "Size"
+msgstr ""
+
+#: classes/class-wc-swatches-product-data-tab.php:229
+#: dist/woocommerce-variation-swatches-and-photos/classes/class-wc-swatches-product-data-tab.php:229
+msgid "Attribute Configuration"
 msgstr ""
 
 #. Plugin Name of the plugin/theme
@@ -313,7 +390,8 @@ msgstr ""
 #. Description of the plugin/theme
 msgid ""
 "WooCommerce Swatches and Photos allows you to configure colors and photos "
-"for shoppers on your site to use when picking variations."
+"for shoppers on your site to use when picking variations. Requires "
+"WooCommerce 1.5.7+"
 msgstr ""
 
 #. Author of the plugin/theme

@@ -2,7 +2,7 @@
 
 class WC_Product_Swatch_Term extends WC_Swatch_Term {
 
-	protected $attribute_options;
+	public $attribute_options;
 
 	public function __construct( $config, $option, $taxonomy, $selected = false ) {
 		global $_wp_additional_image_sizes;
@@ -24,14 +24,32 @@ class WC_Product_Swatch_Term extends WC_Swatch_Term {
 		$this->selected = $selected;
 
 		$this->size = $attribute_options['size'];
-		$the_size   = isset( $_wp_additional_image_sizes[ $this->size ] ) ? $_wp_additional_image_sizes[ $this->size ] : $_wp_additional_image_sizes['shop_thumbnail'];
-		if ( isset( $the_size['width'] ) && isset( $the_size['height'] ) ) {
-			$this->width  = $the_size['width'];
-			$this->height = $the_size['height'];
+
+
+		$the_size = isset( $_wp_additional_image_sizes[ $this->size ] ) ? $_wp_additional_image_sizes[ $this->size ] : $_wp_additional_image_sizes['swatches_image_size'];
+		if ( isset( $the_size['width'] ) && ! empty( $the_size['width'] ) && isset( $the_size['height'] ) && ! empty( $the_size['height'] ) ) {
+			$this->width        = $the_size['width'];
+			$this->height       = $the_size['height'];
+
 		} else {
-			$this->width  = 32;
-			$this->height = 32;
+
+			$image_size = get_option( 'swatches_image_size', array(
+				'width'  => 32,
+				'height' => 32
+			) );
+
+
+			$size['width']  = isset( $image_size['width'] ) && ! empty( $image_size['width'] ) ? $image_size['width'] : 32;
+			$size['height'] = isset( $image_size['height'] ) && ! empty( $image_size['height'] ) ? $image_size['height'] : 32;
+
+
+			$image_size = apply_filters( 'woocommerce_get_image_size_swatches_image_size', $size );
+
+
+			$this->width  = apply_filters( 'woocommerce_swatches_size_width_default', $image_size['width'] );
+			$this->height = apply_filters( 'woocommerce_swatches_size_height_default', $image_size['height'] );
 		}
+
 
 		$key     = md5( sanitize_title( $this->term_slug ) );
 		$old_key = sanitize_title( $this->term_slug );
