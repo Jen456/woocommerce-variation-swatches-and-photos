@@ -1,4 +1,11 @@
 *** WooCommerce Variation Swatches and Photos ***
+2018.06.01 - version 3.0.8
+    * Fix:  Compatibility for WC 3.4.1
+
+2018.02.13 - version 3.0.7
+    * Fix:  Fix a JS error when swatches are loaded via AJAX on initial load.
+    * Update:  Hide select2 inputs inside of swatch-controls.
+
 2018.01.09 - version 3.0.6
     * Update:  Additional tweak for the check variations trigger to allow users to select an in stock item properly the first time.
     * Update:  Correct handling of out of stock items that are selected as defaults.

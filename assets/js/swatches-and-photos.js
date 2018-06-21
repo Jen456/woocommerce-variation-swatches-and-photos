@@ -243,6 +243,10 @@
                 return false;
             }).on('reset_data', function (e) {
 
+            if (calculator == null) {
+                return;
+            }
+
             var current_options = calculator.get_current();
 
             if (!checked) {

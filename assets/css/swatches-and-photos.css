@@ -6,6 +6,10 @@
 	display: none !important;
 }
 
+.swatch-control .select2-container {
+    display:none !important;
+}
+
 .swatch-control.radio-select ul {
 	padding:1px !important;
 	margin:0 !important;
