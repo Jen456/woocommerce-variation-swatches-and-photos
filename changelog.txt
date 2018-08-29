@@ -1,4 +1,8 @@
 *** WooCommerce Variation Swatches and Photos ***
+2018.08.22 - version 3.0.9
+    * Update:  Version bump for WC and WP.
+    * Fix:  Compatibility for WC 3.4.2
+
 2018.06.01 - version 3.0.8
     * Fix:  Compatibility for WC 3.4.1
 
