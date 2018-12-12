@@ -1,4 +1,8 @@
 *** WooCommerce Variation Swatches and Photos ***
+2018.10.23 - version 3.0.10
+    * Update:  Added woocommerce_swatches_picker_default_label filter so users can add a default label.
+    * Update:  Tested to WC 3.5.0
+
 2018.08.22 - version 3.0.9
     * Update:  Version bump for WC and WP.
     * Fix:  Compatibility for WC 3.4.2
