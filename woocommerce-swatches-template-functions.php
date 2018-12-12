@@ -46,7 +46,7 @@ function wc_swatches_variation_attribute_options( $args = array() ) {
 	elseif ( $config->get_type() != 'default' ) :
 
 		if ( $config->get_label_layout() == 'label_above' ) :
-			echo '<div class="attribute_' . $id . '_picker_label swatch-label">&nbsp;</div>';
+			echo '<div class="attribute_' . $id . '_picker_label swatch-label">' . apply_filters('woocommerce_swatches_picker_default_label', '&nbsp;', $config) . '</div>';
 		endif;
 
 		do_action( 'woocommerce_swatches_before_picker', $config );
@@ -87,7 +87,7 @@ function wc_swatches_variation_attribute_options( $args = array() ) {
 		echo '</div>';
 
 		if ( $config->get_label_layout() == 'label_below' ) :
-			echo '<div class="attribute_' . $id . '_picker_label swatch-label">&nbsp;</div>';
+			echo '<div class="attribute_' . $id . '_picker_label swatch-label">' . apply_filters('woocommerce_swatches_picker_default_label', '&nbsp;', $config) . '</div>';
 		endif;
 	else :
 		$args['hide'] = false;
