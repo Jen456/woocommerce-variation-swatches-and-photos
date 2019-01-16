@@ -3,7 +3,11 @@
 //Override the WooCommerce wc_dropdown_variation_attribute_options function. 
 //To do this this file MUST be loaded before WooCommerce core. 
 function wc_dropdown_variation_attribute_options( $args = array() ) {
-	wc_swatches_variation_attribute_options( $args );
+	if ( is_admin() ) {
+		wc_core_dropdown_variation_attribute_options( $args );
+	} else {
+		wc_swatches_variation_attribute_options( $args );
+	}
 }
 
 function wc_swatches_variation_attribute_options( $args = array() ) {
@@ -46,7 +50,7 @@ function wc_swatches_variation_attribute_options( $args = array() ) {
 	elseif ( $config->get_type() != 'default' ) :
 
 		if ( $config->get_label_layout() == 'label_above' ) :
-			echo '<div class="attribute_' . $id . '_picker_label swatch-label">' . apply_filters('woocommerce_swatches_picker_default_label', '&nbsp;', $config) . '</div>';
+			echo '<div class="attribute_' . $id . '_picker_label swatch-label">' . apply_filters( 'woocommerce_swatches_picker_default_label', '&nbsp;', $config ) . '</div>';
 		endif;
 
 		do_action( 'woocommerce_swatches_before_picker', $config );
@@ -55,10 +59,10 @@ function wc_swatches_variation_attribute_options( $args = array() ) {
 		$args['hide'] = true;
 		wc_core_dropdown_variation_attribute_options( $args );
 
-		if ( !empty( $options ) ) {
+		if ( ! empty( $options ) ) {
 			if ( $product && taxonomy_exists( $attribute ) ) {
 				// Get terms if this is a taxonomy - ordered. We need the names too.
-				$terms = wc_get_product_terms( $product->get_id(), $attribute, array('fields' => 'all') );
+				$terms = wc_get_product_terms( $product->get_id(), $attribute, array( 'fields' => 'all' ) );
 
 				foreach ( $terms as $term ) {
 					if ( in_array( $term->slug, $options ) ) {
@@ -76,7 +80,7 @@ function wc_swatches_variation_attribute_options( $args = array() ) {
 			} else {
 				foreach ( $options as $option ) {
 					// This handles < 2.4.0 bw compatibility where text attributes were not sanitized.
-					$selected = sanitize_title( $args['selected'] ) === $args['selected'] ? selected( $args['selected'], sanitize_title( $option ), false ) : selected( $args['selected'], $option, false );
+					$selected    = sanitize_title( $args['selected'] ) === $args['selected'] ? selected( $args['selected'], sanitize_title( $option ), false ) : selected( $args['selected'], $option, false );
 					$swatch_term = new WC_Product_Swatch_Term( $config, $option, $name, $selected, $config->get_size() );
 					do_action( 'woocommerce_swatches_before_picker_item', $swatch_term );
 					echo $swatch_term->get_output();
@@ -87,18 +91,18 @@ function wc_swatches_variation_attribute_options( $args = array() ) {
 		echo '</div>';
 
 		if ( $config->get_label_layout() == 'label_below' ) :
-			echo '<div class="attribute_' . $id . '_picker_label swatch-label">' . apply_filters('woocommerce_swatches_picker_default_label', '&nbsp;', $config) . '</div>';
+			echo '<div class="attribute_' . $id . '_picker_label swatch-label">' . apply_filters( 'woocommerce_swatches_picker_default_label', '&nbsp;', $config ) . '</div>';
 		endif;
 	else :
-		$args['hide'] = false;
-		$args['class'] = $args['class'] .= (!empty( $args['class'] ) ? ' ' : '') . 'wc-default-select';
+		$args['hide']  = false;
+		$args['class'] = $args['class'] .= ( ! empty( $args['class'] ) ? ' ' : '' ) . 'wc-default-select';
 		wc_core_dropdown_variation_attribute_options( $args );
 	endif;
 }
 
 /**
  * Exact Duplicate of wc_dropdown_variation_attribute_options
- * 
+ *
  */
 function wc_core_dropdown_variation_attribute_options( $args = array() ) {
 	$args = wp_parse_args( apply_filters( 'woocommerce_dropdown_variation_attribute_options_args', $args ), array(
@@ -132,7 +136,7 @@ function wc_core_dropdown_variation_attribute_options( $args = array() ) {
 		$options    = $attributes[ $attribute ];
 	}
 
-	$html  = '<select id="' . esc_attr( $id ) . '" class="' . esc_attr( $class ) . '" name="' . esc_attr( $name ) . '" data-attribute_name="attribute_' . esc_attr( sanitize_title( $attribute ) ) . '" data-show_option_none="' . ( $show_option_none ? 'yes' : 'no' ) . '">';
+	$html = '<select id="' . esc_attr( $id ) . '" class="' . esc_attr( $class ) . '" name="' . esc_attr( $name ) . '" data-attribute_name="attribute_' . esc_attr( sanitize_title( $attribute ) ) . '" data-show_option_none="' . ( $show_option_none ? 'yes' : 'no' ) . '">';
 	$html .= '<option value="">' . esc_html( $show_option_none_text ) . '</option>';
 
 	if ( ! empty( $options ) ) {
@@ -151,7 +155,7 @@ function wc_core_dropdown_variation_attribute_options( $args = array() ) {
 			foreach ( $options as $option ) {
 				// This handles < 2.4.0 bw compatibility where text attributes were not sanitized.
 				$selected = sanitize_title( $args['selected'] ) === $args['selected'] ? selected( $args['selected'], sanitize_title( $option ), false ) : selected( $args['selected'], $option, false );
-				$html    .= '<option value="' . esc_attr( $option ) . '" ' . $selected . '>' . esc_html( apply_filters( 'woocommerce_variation_option_name', $option ) ) . '</option>';
+				$html     .= '<option value="' . esc_attr( $option ) . '" ' . $selected . '>' . esc_html( apply_filters( 'woocommerce_variation_option_name', $option ) ) . '</option>';
 			}
 		}
 	}
@@ -163,33 +167,33 @@ function wc_core_dropdown_variation_attribute_options( $args = array() ) {
 
 function wc_radio_variation_attribute_options( $args = array() ) {
 	$args = wp_parse_args( apply_filters( 'woocommerce_radio_variation_attribute_options_args', $args ), array(
-	    'options' => false,
-	    'attribute' => false,
-	    'product' => false,
-	    'selected' => false,
-	    'name' => '',
-	    'id' => '',
-	    'class' => '',
-		) );
+		'options'   => false,
+		'attribute' => false,
+		'product'   => false,
+		'selected'  => false,
+		'name'      => '',
+		'id'        => '',
+		'class'     => '',
+	) );
 
-	$options = $args['options'];
-	$product = $args['product'];
+	$options   = $args['options'];
+	$product   = $args['product'];
 	$attribute = $args['attribute'];
-	$name = $args['name'] ? $args['name'] : 'attribute_' . sanitize_title( $attribute ) . '_' . uniqid();
-	$id = $args['id'] ? $args['id'] : sanitize_title( $attribute ) . uniqid();
-	$class = $args['class'];
+	$name      = $args['name'] ? $args['name'] : 'attribute_' . sanitize_title( $attribute ) . '_' . uniqid();
+	$id        = $args['id'] ? $args['id'] : sanitize_title( $attribute ) . uniqid();
+	$class     = $args['class'];
 
-	if ( empty( $options ) && !empty( $product ) && !empty( $attribute ) ) {
+	if ( empty( $options ) && ! empty( $product ) && ! empty( $attribute ) ) {
 		$attributes = $product->get_variation_attributes();
-		$options = $attributes[$attribute];
+		$options    = $attributes[ $attribute ];
 	}
 
 	echo '<ul id="radio_select_' . esc_attr( $id ) . '" class="' . esc_attr( $class ) . '" data-attribute_name="attribute_' . esc_attr( sanitize_title( $attribute ) ) . '">';
 
-	if ( !empty( $options ) ) {
+	if ( ! empty( $options ) ) {
 		if ( $product && taxonomy_exists( $attribute ) ) {
 			// Get terms if this is a taxonomy - ordered. We need the names too.
-			$terms = wc_get_product_terms( $product->get_id(), $attribute, array('fields' => 'all') );
+			$terms = wc_get_product_terms( $product->get_id(), $attribute, array( 'fields' => 'all' ) );
 
 			foreach ( $terms as $term ) {
 				if ( in_array( $term->slug, $options ) ) {
@@ -214,5 +218,6 @@ function wc_radio_variation_attribute_options( $args = array() ) {
 
 function woocommerce_swatches_get_template( $template_name, $args = array() ) {
 	global $woocommerce_swatches;
+
 	return wc_get_template( $template_name, $args, 'woocommerce-swatches/', $woocommerce_swatches->plugin_dir() . '/templates/' );
 }
