@@ -1,4 +1,10 @@
 *** WooCommerce Variation Swatches and Photos ***
+2019.01.02 - version 3.0.11
+    * Update: Do not overwrite default attribute selectors when in the admin, causes problems with adding variable items to manual orders.
+    * Update: Set default swatch configuration if none found for an attribute.
+    * Update:  Allow sizes to be set on Taxonomy Images an Colors
+    * Update:  Fix size lookup to include built in WP Sizes.
+
 2018.10.23 - version 3.0.10
     * Update:  Added woocommerce_swatches_picker_default_label filter so users can add a default label.
     * Update:  Tested to WC 3.5.0

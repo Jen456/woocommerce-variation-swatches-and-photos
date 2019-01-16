@@ -68,9 +68,9 @@ class WC_Swatch_Term {
 	}
 
 	public function init_size( $size ) {
-		global $_wp_additional_image_sizes;
+		$sizes = $this->get_image_sizes();
 		$this->size = $size;
-		$the_size   = isset( $_wp_additional_image_sizes[ $size ] ) ? $_wp_additional_image_sizes[ $size ] : $_wp_additional_image_sizes['swatches_image_size'];
+		$the_size   = isset( $sizes[ $size ] ) ? $sizes[ $size ] : $sizes['swatches_image_size'];
 		if ( isset( $the_size['width'] ) && ! empty( $the_size['width'] ) && isset( $the_size['height'] ) && ! empty( $the_size['height'] ) ) {
 
 			$this->width  = $the_size['width'];
@@ -159,6 +159,28 @@ class WC_Swatch_Term {
 
 	public function meta_key() {
 		return $this->taxonomy_slug . '_' . $this->attribute_meta_key;
+	}
+
+	protected function get_image_sizes() {
+		global $_wp_additional_image_sizes;
+
+		$sizes = array();
+
+		foreach ( get_intermediate_image_sizes() as $_size ) {
+			if ( in_array( $_size, array('thumbnail', 'medium', 'medium_large', 'large') ) ) {
+				$sizes[ $_size ]['width']  = get_option( "{$_size}_size_w" );
+				$sizes[ $_size ]['height'] = get_option( "{$_size}_size_h" );
+				$sizes[ $_size ]['crop']   = (bool) get_option( "{$_size}_crop" );
+			} elseif ( isset( $_wp_additional_image_sizes[ $_size ] ) ) {
+				$sizes[ $_size ] = array(
+					'width'  => $_wp_additional_image_sizes[ $_size ]['width'],
+					'height' => $_wp_additional_image_sizes[ $_size ]['height'],
+					'crop'   => $_wp_additional_image_sizes[ $_size ]['crop'],
+				);
+			}
+		}
+
+		return $sizes;
 	}
 
 }

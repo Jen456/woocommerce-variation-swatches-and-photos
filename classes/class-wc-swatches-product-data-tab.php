@@ -187,7 +187,7 @@ class WC_Swatches_Product_Data_Tab extends WC_EX_Product_Data_Tab_Swatches {
 											</td>
 										</tr>
 
-										<tr class="field_option field_option_product_custom" style="<?php echo $current_type != 'product_custom' ? 'display:none;' : ''; ?>">
+										<tr class="field_option field_option_product_custom field_option_term_options" style="<?php echo $current_type != 'product_custom' && $current_type != 'term_options' ? 'display:none;' : ''; ?>">
 											<td class="label">
 												<label for="_swatch_type_options_<?php echo $key_attr; ?>_size"><?php _e('Size', 'wc_swatches_and_photos'); ?></label>
 											</td>

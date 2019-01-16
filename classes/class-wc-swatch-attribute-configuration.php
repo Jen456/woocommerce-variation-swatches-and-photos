@@ -38,7 +38,11 @@ class WC_Swatches_Attribute_Configuration_Object {
 
 			$this->_attribute_name = $attribute;
 			$this->_product = $product;
-			$this->_swatch_options = $swatch_options[$lookup_name];
+			if (isset($swatch_options[$lookup_name])) {
+                $this->_swatch_options = $swatch_options[$lookup_name];
+            } else {
+			    $this->_swatch_options = array();
+            }
 		}
 	}
 

@@ -42,7 +42,6 @@ class WC_SwatchesPlugin {
 	}
 
 	public function on_init() {
-		global $woocommerce;
 		$image_size = get_option( 'swatches_image_size', array() );
 		$size       = array();
 
@@ -56,7 +55,7 @@ class WC_SwatchesPlugin {
 	}
 
 	public function on_enqueue_scripts() {
-		global $pagenow, $wp_scripts;
+		global $pagenow;
 
 		if ( ! is_admin() ) {
 			wp_enqueue_style( 'swatches-and-photos', $this->plugin_url() . '/assets/css/swatches-and-photos.css', array(), WC_SWATCHES_VERSION );
