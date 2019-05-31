@@ -1,4 +1,8 @@
 *** WooCommerce Variation Swatches and Photos ***
+2019.05.07 - version 3.0.12
+    * Update:  Resolve warning in loading custom image sizes.
+    * Update:  Fix compatibility warnings with WooCommerce 3.6
+
 2019.01.02 - version 3.0.11
     * Update: Do not overwrite default attribute selectors when in the admin, causes problems with adding variable items to manual orders.
     * Update: Set default swatch configuration if none found for an attribute.

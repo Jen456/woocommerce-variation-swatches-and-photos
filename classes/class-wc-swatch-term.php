@@ -41,9 +41,9 @@ class WC_Swatch_Term {
 	public function on_init() {
 		$this->init_size( $this->size );
 
-		$type               = get_woocommerce_term_meta( $this->term_id, $this->meta_key() . '_type', true );
-		$color              = get_woocommerce_term_meta( $this->term_id, $this->meta_key() . '_color', true );
-		$this->thumbnail_id = get_woocommerce_term_meta( $this->term_id, $this->meta_key() . '_photo', true );
+		$type               = get_term_meta( $this->term_id, $this->meta_key() . '_type', true );
+		$color              = get_term_meta( $this->term_id, $this->meta_key() . '_color', true );
+		$this->thumbnail_id = get_term_meta( $this->term_id, $this->meta_key() . '_photo', true );
 		$this->description  = term_description( $this->term_id, $this->taxonomy_slug );
 
 		$this->type          = $type;
@@ -84,11 +84,11 @@ class WC_Swatch_Term {
 				'height' => 32
 			) );
 
+			$loaded_size = array();
+			$loaded_size['width']  = isset( $image_size['width'] ) && ! empty( $image_size['width'] ) ? $image_size['width'] : 32;
+			$loaded_size['height'] = isset( $image_size['height'] ) && ! empty( $image_size['height'] ) ? $image_size['height'] : 32;
 
-			$size['width']  = isset( $image_size['width'] ) && ! empty( $image_size['width'] ) ? $image_size['width'] : 32;
-			$size['height'] = isset( $image_size['height'] ) && ! empty( $image_size['height'] ) ? $image_size['height'] : 32;
-
-			$image_size = apply_filters( 'woocommerce_get_image_size_swatches_image_size', $size );
+			$image_size = apply_filters( 'woocommerce_get_image_size_swatches_image_size', $loaded_size );
 
 
 			$this->width  = apply_filters( 'woocommerce_swatches_size_width_default', $image_size['width'] );
