@@ -237,9 +237,9 @@ class WC_Swatches_Product_Attribute_Images {
 				$type = isset( $data['type'] ) ? $data['type'] : '';
 
 
-				update_woocommerce_term_meta( $term_id, $taxonomy . '_' . $this->meta_key . '_type', $type );
-				update_woocommerce_term_meta( $term_id, $taxonomy . '_' . $this->meta_key . '_photo', $photo );
-				update_woocommerce_term_meta( $term_id, $taxonomy . '_' . $this->meta_key . '_color', $color );
+				update_term_meta( $term_id, $taxonomy . '_' . $this->meta_key . '_type', $type );
+				update_term_meta( $term_id, $taxonomy . '_' . $this->meta_key . '_photo', $photo );
+				update_term_meta( $term_id, $taxonomy . '_' . $this->meta_key . '_color', $color );
 			}
 		}
 	}
