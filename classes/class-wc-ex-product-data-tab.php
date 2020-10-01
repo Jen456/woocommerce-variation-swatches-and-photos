@@ -50,7 +50,7 @@ if ( !class_exists( 'WC_EX_Product_Data_Tab_Swatches' ) ) {
 
 		public function product_write_panel_tabs() {
 			?>
-			<li class="<?php echo $this->tab_class; ?><?php echo $this->tab_additional_class; ?>"><a href="#<?php echo $this->tab_id; ?>"><?php echo $this->tab_title; ?></a></li>
+            <li class="<?php echo $this->tab_class; ?><?php echo $this->tab_additional_class; ?>"><a href="#<?php echo $this->tab_id; ?>"><span><?php echo $this->tab_title; ?></span></a></li>
 			<?php
 		}
 

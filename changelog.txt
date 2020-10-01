@@ -1,7 +1,19 @@
 *** WooCommerce Variation Swatches and Photos ***
+2020.08.18 - version 3.1.2
+    * Version:  WP and WC compatibility tags
+
+2020.05.06 - version 3.1.1
+    * Version:  WP and WC compatibility tags
+
+2020.04.08 - version 3.1.0
+    * New:  Added in several actions inside of the rendering of the swatches to allow better control of wrapper classes and other customizations.
+    * Update: Fix issue with incorrect formatting of the product data tab item.
+    * Version compatibility updates.
+
 2019.05.07 - version 3.0.12
     * Update:  Resolve warning in loading custom image sizes.
     * Update:  Fix compatibility warnings with WooCommerce 3.6
+    * Update:  Make sure up to date .pot file is included in distribution.
 
 2019.01.02 - version 3.0.11
     * Update: Do not overwrite default attribute selectors when in the admin, causes problems with adding variable items to manual orders.
