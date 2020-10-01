@@ -44,8 +44,10 @@ function wc_swatches_variation_attribute_options( $args = array() ) {
 		do_action( 'woocommerce_swatches_before_picker', $config );
 		echo '<div id="picker_' . esc_attr( $id ) . '" class="radio-select select	 swatch-control">';
 		$args['hide'] = true;
+		do_action( 'woocommerce_swatches_before_picker_items', $config ); //added by TDG
 		wc_core_dropdown_variation_attribute_options( $args );
 		wc_radio_variation_attribute_options( $args );
+		do_action( 'woocommerce_swatches_after_picker_items', $config ); //added by TDG
 		echo '</div>';
 	elseif ( $config->get_type() != 'default' ) :
 
@@ -58,7 +60,7 @@ function wc_swatches_variation_attribute_options( $args = array() ) {
 		echo '<div id="picker_' . esc_attr( $id ) . '" class="select swatch-control">';
 		$args['hide'] = true;
 		wc_core_dropdown_variation_attribute_options( $args );
-
+		do_action( 'woocommerce_swatches_before_picker_items', $config ); //added by TDG
 		if ( ! empty( $options ) ) {
 			if ( $product && taxonomy_exists( $attribute ) ) {
 				// Get terms if this is a taxonomy - ordered. We need the names too.
@@ -88,8 +90,9 @@ function wc_swatches_variation_attribute_options( $args = array() ) {
 				}
 			}
 		}
+		do_action( 'woocommerce_swatches_after_picker_items', $config ); //added by TDG
 		echo '</div>';
-
+		do_action( 'woocommerce_swatches_after_picker', $config );
 		if ( $config->get_label_layout() == 'label_below' ) :
 			echo '<div class="attribute_' . $id . '_picker_label swatch-label">' . apply_filters( 'woocommerce_swatches_picker_default_label', '&nbsp;', $config ) . '</div>';
 		endif;
